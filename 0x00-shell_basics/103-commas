@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -d . .. [0-9a-zA-Z]* [0-9a-zA-Z]*/
+ls -dp . .. [0-9a-zA-Z]* [0-9a-zA-Z]*/ | sed 's#\(.*\)#\1,#' | tr -d '\n' | sed 's#,$#\n#'
